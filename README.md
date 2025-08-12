@@ -1,59 +1,100 @@
-# NG IOAyoub.Fr
+# Angular 20 Template
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.1.0.
+Un template moderne et prêt à l’emploi pour démarrer rapidement des projets Angular 20 avec une intégration complète d’outils pour un workflow efficace et une qualité de code optimale.
 
-## Development server
+## 🚀 Fonctionnalités principales
 
-To start a local development server, run:
+- **Angular 20** avec TypeScript strict
+- **Tailwind CSS** configuré pour un style utilitaire rapide
+- **Prettier** pour un formatage de code cohérent
+- **Angular ESLint** pour le linting du code
+- **Husky + lint-staged** pour automatiser les vérifications avant commit
+- **GitHub Actions** pour lint, tests et vérification TypeScript en CI
+- Génération de composants Angular avec **inline styles** (pas de fichiers CSS)
 
-```bash
-ng serve
-```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+---
 
-## Code scaffolding
+## 📦 Installation
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+1. **Cloner le projet ou l’utiliser comme template GitHub**
+   
+   ```
+   git clone git@github.com:ioayoub/TEMPLATE-Angular-starter
+   ```
+   
+   ```
+   cd TEMPLATE-Angular-starter**
+   ```
 
-```bash
-ng generate component component-name
-```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+2. **Installer les dépendances**
+  ```
+  npm install
 
-```bash
-ng generate --help
-```
+  ```
 
-## Building
+3. **Lancer le projet**
+  ```
+  ng serve
+  ```
+→ accessible par défaut sur [http://localhost:4200/](http://localhost:4200/)
 
-To build the project run:
+---
 
-```bash
-ng build
-```
+## 🛠 Scripts disponibles
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+| Commande             | Description |
+|----------------------|-------------|
+| `npm start`          | Lance le serveur Angular (dev) |
+| `npm test`           | Lance les tests unitaires |
+| `npm run lint`       | Exécute Angular ESLint (ng lint) |
+| `npm run prepare`    | Initialise Husky pour les hooks Git |
 
-## Running unit tests
+---
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+## 🎨 Tailwind CSS
 
-```bash
-ng test
-```
+- Fichier de config : `tailwind.config.js`
+- Les classes sont disponibles dans tout le projet (`src/styles.css`).
+- Configuration optimisée pour framework Angular.
+- Création de composants Angular avec `inlineStyle: true` pour ne pas générer de fichiers CSS/SCSS.
 
-## Running end-to-end tests
+---
 
-For end-to-end (e2e) testing, run:
+## 🔍 Qualité du code
 
-```bash
-ng e2e
-```
+**Avant chaque commit** grâce à Husky :
+- Lancement des tests (`npm test`)
+- Vérification des types TypeScript (`tsc --noEmit`)
+- Lint avec Angular ESLint (`ng lint`)
+- Formatage des fichiers modifiés avec Prettier (`lint-staged`)
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+---
 
-## Additional Resources
+## ⚙ Intégration continue (CI)
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Le fichier `.github/workflows/ci.yml` configure un pipeline GitHub Actions qui :
+1. Installe les dépendances
+2. Vérifie le typage TypeScript (`tsc --noEmit`)
+3. Lance le lint (`ng lint`)
+4. Exécute les tests Angular en **ChromeHeadless**
+
+---
+
+## 📄 Bonnes pratiques
+
+- Respecter le format Prettier pour éviter les conflits
+- Mettre à jour régulièrement Angular et Tailwind
+- Ajouter d’autres hooks Git Husky si besoin (`pre-push`, `post-merge`, etc.)
+- Adapter `angular.json`, `tsconfig.json` et `tailwind.config.js` aux besoins spécifiques
+
+---
+
+## 📌 Licence
+
+Libre d’utilisation et de modification pour tout type de projet.
+
+---
+
+
